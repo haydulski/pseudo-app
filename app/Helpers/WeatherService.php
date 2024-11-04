@@ -37,7 +37,7 @@ class WeatherService
         $output = [];
 
         foreach ($data['time'] as $key => $time) {
-            $output[] = (new DateTime($time))->format('H:i') . ' - ' . $data['temperature_2m'][$key] . '°C';
+            $output[] = (new DateTime($time))->format('H:i') . ' --> ' . $data['temperature_2m'][$key] . '°C';
         }
 
         return $output;
